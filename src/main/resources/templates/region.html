@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <title th:text="${title}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "Century Gothic", sans-serif;
+    }
+
+    header {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("https://wallpapercave.com/wp/wp2168931.jpg");
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+
+    ul {
+        float: right;
+        list-style-type: none;
+        margin-top: 25px;
+    }
+
+    ul li {
+        display: inline-block;
+    }
+
+    ul {
+        text-decoration: none;
+        color: #ffffff;
+        padding: 5px 20px;
+        border: 1px solid transparent;
+        transition: 0.6s ease;
+    }
+
+    ul li a:hover {
+        background-color: #ffffff;
+        color: #000;
+    }
+
+    ul li.active a {
+        background-color: white;
+        color: black;
+    }
+
+    .btn {
+        border: 1px solid white;
+        padding: 10px 30px;
+        color: white;
+        text-decoration: none;
+        transition: 0.6s ease;
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+        color: #000;
+    }
+
+    .btn {
+        border: 1px solid white;
+        padding: 10px 30px;
+        color: white;
+        text-decoration: none;
+        transition: 0.6s ease;
+    }
+
+    .btn:hover {
+        background-color: #ffffff;
+        color: #000;
+    }
+
+    .title {
+        position: absolute;
+        top: 44%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .title h1 {
+        color: white;
+        font-size: 34px;
+    }
+
+
+    .center {
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbutton {
+        border: 1px solid white;
+        padding: 60px 40px;
+        color: white;
+        text-decoration: none;
+        transition: 0.6s ease;
+        margin-left: 10px;
+
+    }
+
+    .navbutton:hover {
+        background-color: white;
+        color: black;
+    }
+
+</style>
+<header>
+    <div class="main">
+        <ul>
+            <li class="active"></li>
+            <li><a href="/home" class="btn">Galvena</a></li>
+            <li><a href="/tourism/1/region" class="btn">Pilsētas tūrisms</a></li>
+            <li><a href="/tourism/2/region" class="btn">Lauku tūrisms</a></li>
+        </ul>
+    </div>
+
+    <body>
+    <div class="title">
+        <h1>IZVĒLIES REGIONU TŪRISMAM <span th:text="${title}"></span></h1>
+
+    </div>
+    <div class="center">
+        <a href="region/2" class="navbutton">Kurzeme</a>
+        <a href="region/4" class="navbutton">Zemgale</a>
+        <a href="region/1" class="navbutton">Vidzeme</a>
+        <a href="region/3" class="navbutton">Latgale</a>
+
+    </div>
+    </body>
+</header>
+</html>
